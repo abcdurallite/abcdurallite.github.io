@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from cartzilla.createx.studio/dashboard-settings.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 09 Nov 2023 04:54:56 GMT -->
+  <!-- Added by HTTrack --><meta
+    http-equiv="content-type"
+    content="text/html;charset=utf-8"
+  /><!-- /Added by HTTrack -->
+  <head>
+    <meta charset="utf-8" />
+    <title>Cartzilla | Account Settings</title>
+    <!-- SEO Meta Tags-->
+    <meta
+      name="description"
+      content="Cartzilla - Bootstrap E-commerce Template"
+    />
+    <meta
+      name="keywords"
+      content="bootstrap, shop, e-commerce, market, modern, responsive,  business, mobile, bootstrap, html5, css3, js, gallery, slider, touch, creative, clean"
+    />
+    <meta name="author" content="Createx Studio" />
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="mask-icon" color="#fe6a6a" href="safari-pinned-tab.svg" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+    <style>
+      /* Hide scrollbar background */
+      ::-webkit-scrollbar {
+        width: 8px; /* Adjust width for vertical scrollbar */
+        height: 8px; /* Adjust height for horizontal scrollbar */
+      }
+
+      /* The scrollbar track (the background) */
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1; /* Light grey background */
+      }
+
+      /* The scrollbar handle (the part that you can move) */
+      ::-webkit-scrollbar-thumb {
+        background: #888; /* Darker grey handle */
+        border-radius: 10px; /* Rounded corners */
+      }
+
+      /* When hovering over the scrollbar handle */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555; /* Darker handle on hover */
+      }
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1; /* Fully visible */
+        }
+        25% {
+          opacity: 0.5; /* Invisible */
+        }50% {
+          opacity: 0; /* Invisible */
+        }
+      }
+
+      /* Apply the blinking animation to an element */
+      .blink {
+        animation: blink 1s infinite; /* Blink every 1 second, infinitely */
+      }
+    </style>
+    <!-- Vendor Styles including: Font Icons, Plugins, etc.-->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="vendor/simplebar/dist/simplebar.min.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="vendor/tiny-slider/dist/tiny-slider.css"
+    />
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="css/theme.min.css" />
+    <!-- Google Tag Manager-->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "../www.googletagmanager.com/gtm5445.html?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WKV3GT5");
+    </script>
+  </head>
+  <!-- Body-->
+  <body class="handheld-toolbar-enabled">
+    <!-- Google Tag Manager (noscript)-->
+    <noscript>
+      <iframe
+        src="http://www.googletagmanager.com/ns.html?id=GTM-WKV3GT5"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- Sign in / sign up modal-->
+    <div class="modal fade" id="signin-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-secondary">
+            <ul class="nav nav-tabs card-header-tabs" role="tablist">
+              <li class="nav-item">
+                <a
+                  class="nav-link fw-medium active"
+                  href="#signin-tab"
+                  data-bs-toggle="tab"
+                  role="tab"
+                  aria-selected="true"
+                  ><i class="ci-unlocked me-2 mt-n1"></i>Sign in</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link fw-medium"
+                  href="#signup-tab"
+                  data-bs-toggle="tab"
+                  role="tab"
+                  aria-selected="false"
+                  ><i class="ci-user me-2 mt-n1"></i>Sign up</a
+                >
+              </li>
+            </ul>
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body tab-content py-4">
+            <form
+              class="needs-validation tab-pane fade show active"
+              autocomplete="off"
+              novalidate
+              id="signin-tab"
+            >
+              <div class="mb-3">
+                <label class="form-label" for="si-email">Email address</label>
+                <input
+                  class="form-control"
+                  type="email"
+                  id="si-email"
+                  placeholder="johndoe@example.com"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Please provide a valid email address.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="si-password">Password</label>
+                <div class="password-toggle">
+                  <input
+                    class="form-control"
+                    type="password"
+                    id="si-password"
+                    required
+                  />
+                  <label
+                    class="password-toggle-btn"
+                    aria-label="Show/hide password"
+                  >
+                    <input class="password-toggle-check" type="checkbox" /><span
+                      class="password-toggle-indicator"
+                    ></span>
+                  </label>
+                </div>
+              </div>
+              <div class="mb-3 d-flex flex-wrap justify-content-between">
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="si-remember"
+                  />
+                  <label class="form-check-label" for="si-remember"
+                    >Remember me</label
+                  >
+                </div>
+                <a class="fs-sm" href="#">Forgot password?</a>
+              </div>
+              <button
+                class="btn btn-primary btn-shadow d-block w-100"
+                type="submit"
+              >
+                Sign in
+              </button>
+            </form>
+            <form
+              class="needs-validation tab-pane fade"
+              autocomplete="off"
+              novalidate
+              id="signup-tab"
+            >
+              <div class="mb-3">
+                <label class="form-label" for="su-name">Full name</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="su-name"
+                  placeholder="John Doe"
+                  required
+                />
+                <div class="invalid-feedback">Please fill in your name.</div>
+              </div>
+              <div class="mb-3">
+                <label for="su-email">Email address</label>
+                <input
+                  class="form-control"
+                  type="email"
+                  id="su-email"
+                  placeholder="johndoe@example.com"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Please provide a valid email address.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="su-password">Password</label>
+                <div class="password-toggle">
+                  <input
+                    class="form-control"
+                    type="password"
+                    id="su-password"
+                    required
+                  />
+                  <label
+                    class="password-toggle-btn"
+                    aria-label="Show/hide password"
+                  >
+                    <input class="password-toggle-check" type="checkbox" /><span
+                      class="password-toggle-indicator"
+                    ></span>
+                  </label>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="su-password-confirm"
+                  >Confirm password</label
+                >
+                <div class="password-toggle">
+                  <input
+                    class="form-control"
+                    type="password"
+                    id="su-password-confirm"
+                    required
+                  />
+                  <label
+                    class="password-toggle-btn"
+                    aria-label="Show/hide password"
+                  >
+                    <input class="password-toggle-check" type="checkbox" /><span
+                      class="password-toggle-indicator"
+                    ></span>
+                  </label>
+                </div>
+              </div>
+              <button
+                class="btn btn-primary btn-shadow d-block w-100"
+                type="submit"
+              >
+                Sign up
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="page-wrapper">
+      <!-- Add Payment Method-->
+      <form
+        class="needs-validation modal fade"
+        method="post"
+        id="add-payment"
+        tabindex="-1"
+        novalidate
+      >
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Add a payment method</h5>
+              <button
+                class="btn-close"
+                type="button"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="form-check mb-4">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  id="paypal"
+                  name="payment-method"
+                />
+                <label class="form-check-label" for="paypal"
+                  >PayPal<img
+                    class="d-inline-block align-middle ms-2"
+                    src="img/card-paypal.png"
+                    width="39"
+                    alt="PayPal"
+                /></label>
+              </div>
+              <div class="form-check mb-4">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  id="card"
+                  name="payment-method"
+                  checked
+                />
+                <label class="form-check-label" for="card"
+                  >Credit / Debit card<img
+                    class="d-inline-block align-middle ms-2"
+                    src="img/cards.png"
+                    width="187"
+                    alt="Credit card"
+                /></label>
+              </div>
+              <div class="row g-3 mb-2">
+                <div class="col-sm-6">
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="number"
+                    placeholder="Card Number"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please fill in the card number!
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="name"
+                    placeholder="Full Name"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please provide name on the card!
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="expiry"
+                    placeholder="MM/YY"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please provide card expiration date!
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="cvc"
+                    placeholder="CVC"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please provide card CVC code!
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <button class="btn btn-primary d-block w-100" type="submit">
+                    Register this card
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <!-- Navbar Marketplace-->
+      <header class="shadow-sm">
+        <!-- Topbar-->
+        <div class="topbar topbar-dark bg-danger">
+          <div class="container justify-content-center">
+            <div class="tns-carousel tns-controls-static d-block">
+              <div
+                class="tns-carousel-inner"
+                data-carousel-options='{"mode": "gallery", "nav": false}'
+              >
+                <div class="topbar-text text-white">Your Are On Guest Mode</div>
+                <div class="topbar-text text-white">
+                  Join Our Bank To Enjoy Our Offer
+                </div>
+                <div class="topbar-text text-white">We Love You More</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Dashboard header-->
+      <div class="page-title-overlap bg-dark pt-4">
+        <div
+          class="container d-flex flex-wrap flex-sm-nowrap justify-content-center justify-content-sm-between align-items-center pt-2"
+        >
+          <div class="d-flex align-items-center pb-3">
+            <div
+              class="img-thumbnail rounded-circle position-relative flex-shrink-0"
+              style="width: 6.375rem"
+            >
+              <img
+                class="rounded-circle"
+                src="https://cdn.dribbble.com/users/2180180/avatars/normal/1d3d3ad89a33e4a6dd6ebb2123234f3f.png?1715181292"
+                alt="Createx Studio"
+              />
+            </div>
+            <div class="ps-3">
+              <h3 class="text-light fs-lg mb-0">
+                Jake Nerdorio
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  fill="#fe696a"
+                  class="mx-2 text-danger bi bi-patch-check-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708"
+                  />
+                </svg>
+              </h3>
+              <span class="d-block text-light fs-ms opacity-60 py-1"
+                >2025@AdurahBank.com</span
+              >
+              <p class="blink text-white bg-warning shadow px-1">Your account has been frozen</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container mb-5 pb-3">
+        <div class="bg-light shadow-lg rounded-3 overflow-hidden">
+          <div class="row">
+            <!-- Sidebar-->
+            <aside class="col-lg-4 pe-xl-5">
+              <!-- Account menu toggler (hidden on screens larger 992px)-->
+              <div class="d-block d-lg-none p-4">
+                <a
+                  class="btn btn-outline-accent d-block"
+                  href="#"
+                  onclick="guestMode()"
+                  data-bs-toggle="collapse"
+                  ><i class="ci-menu me-2"></i>Account menu</a
+                >
+              </div>
+              <!-- Actual menu-->
+              <div class="h-100 border-end mb-2">
+                <div class="d-lg-block collapse" id="account-menu">
+                  <div class="bg-secondary p-4">
+                    <h3 class="fs-sm mb-0 text-muted">Account</h3>
+                  </div>
+
+                  <ul class="list-unstyled mb-0">
+                    <li class="border-bottom mb-0">
+                      <a
+                        class="nav-link-style d-flex align-items-center px-4 py-3"
+                        href="#"
+                        onclick="guestMode()"
+                        ><i class="ci-home opacity-60 me-2"></i>Home<span
+                          class="fs-sm text-muted ms-auto"
+                          >$1,375,987.00</span
+                        ></a
+                      >
+                    </li>
+                    <li class="border-bottom mb-0">
+                      <a
+                        class="nav-link-style d-flex align-items-center px-4 py-3"
+                        href="#"
+                        onclick="guestMode()"
+                        ><i class="ci-package opacity-60 me-2"></i
+                        >Notifications<span class="fs-sm text-muted ms-auto"
+                          >5</span
+                        ></a
+                      >
+                    </li>
+
+                    <li class="border-bottom mb-0">
+                      <a
+                        class="nav-link-style d-flex align-items-center px-4 py-3"
+                        href="#"
+                        onclick="guestMode()"
+                        ><i class="ci-currency-exchange opacity-60 me-2"></i
+                        >Transfer</a
+                      >
+                    </li>
+                    <li class="mb-0">
+                      <a
+                        class="nav-link-style d-flex align-items-center px-4 py-3"
+                        href="#"
+                        onclick="guestMode()"
+                        ><i class="ci-sign-out opacity-60 me-2"></i>Sign out</a
+                      >
+                    </li>
+                  </ul>
+                  <hr />
+                </div>
+              </div>
+            </aside>
+            <!-- Content-->
+            <section class="col-lg-8 pt-lg-4 pb-4 mb-3">
+              <div class="pt-2 px-4 ps-lg-0 pe-xl-5">
+                <h2 class="h3 py-2 text-center text-sm-start">
+                  Hey Jake, Welcome to banking online
+                </h2>
+                <p id="lastlogin"></p>
+
+                <!--  -->
+
+                <div
+                  class="d-flex p-3 justify-content-between"
+                  style="overflow-x: auto"
+                >
+                  <div
+                    class="shadow border col-12 col-lg-5 p-4 rounded"
+                    style="flex-shrink: 0"
+                  >
+                    <div class="d-flex justify-content-between">
+                      <span>
+                        <i class="ci-card opacity-60 me-2"></i>
+                        Debit Balance
+                      </span>
+                      <p>xxx xxxx xxx</p>
+                    </div>
+                    <h2
+                      class="h3 py-2 text-center text-sm-start"
+                      style="color: limegreen"
+                    >
+                      $1,234,2324.0
+                    </h2>
+                  </div>
+
+                  <!--  -->
+                  <div
+                    class="shadow border col-12 mx-lg-0 mx-5 col-lg-5 p-4 rounded"
+                    style="flex-shrink: 0"
+                  >
+                    <div class="d-flex justify-content-between">
+                      <span>
+                        <i class="ci-card opacity-60 me-2"></i>
+                        Credit Balance
+                      </span>
+                      <p>xxx xxxx xxxx</p>
+                    </div>
+                    <h2
+                      class="h3 py-2 text-center text-sm-start"
+                      style="color: limegreen"
+                    >
+                      $1,234,2324.0
+                    </h2>
+                  </div>
+                </div>
+                <br />
+                <!--  -->
+                <div
+                  class="d-flex p-3 justify-content-between"
+                  style="overflow-x: auto"
+                >
+                  <div
+                    class="shadow border col-12 col-lg-5 p-4 rounded"
+                    style="
+                      flex-shrink: 0;
+                      background-image: linear-gradient(
+                        210deg,
+                        blue,
+                        lightblue,
+                        purple
+                      );
+                    "
+                  >
+                    <div
+                      class="d-flex justify-content-between text-white align-items-center"
+                    >
+                      <span> LoNard Bank </span>
+                      <img src="./img/visa.png" alt="" style="width: 50px" />
+                    </div>
+                    <h2 class="h6 py-2 text-center text-white text-sm-start">
+                      xxxx-xxx-xxxx-784
+                    </h2>
+                    <div
+                      class="d-flex justify-content-between text-white"
+                      style="font-size: small"
+                    >
+                      <small> Jake Remany</small> <span>05/26</span>
+                    </div>
+                  </div>
+                  <div
+                    class="shadow border col-12 col-lg-5 p-4 rounded mx-5 mx-lg-0"
+                    style="
+                      flex-shrink: 0;
+                      background-image: linear-gradient(
+                        110deg,
+                        rgb(0, 255, 13),
+                        rgb(230, 229, 173),
+                        rgb(19, 0, 128)
+                      );
+                    "
+                  >
+                    <div
+                      class="d-flex justify-content-between text-white align-items-center"
+                    >
+                      <span> Rekado Bank </span>
+                      <img src="./img/visa.png" alt="" style="width: 50px" />
+                    </div>
+                    <h2 class="h6 py-2 text-center text-white text-sm-start">
+                      xxxx-xxx-xxxx-784
+                    </h2>
+                    <div
+                      class="d-flex justify-content-between text-white"
+                      style="font-size: small"
+                    >
+                      <small> Jake Remany</small> <span>05/26</span>
+                    </div>
+                  </div>
+
+                  <!--  -->
+                </div>
+                <br />
+                <br />
+
+                <h3 class="h5 pb-2">Pending Payments history</h3>
+                <br />
+
+                <div class="table-responsive">
+                  <table class="table table-layout-fixed fs-sm mb-0">
+                    <thead>
+                      <tr>
+                        <th>Amount</th>
+                        <th>Account Number</th>
+                        <th>Date processed</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>$1,233.84</td>
+                        <td>xxxx-xxx-xxxx-784</td>
+                        <td>July 16, 2024</td>
+                      </tr>
+                      <tr>
+                        <td>$805.79</td>
+                        <td>xxxx-xxx-xxxx-621</td>
+                        <td>July 1, 2024</td>
+                      </tr>
+
+                      <tr>
+                        <td>$493.24</td>
+                        <td>xxxx-xxx-xxxx-889</td>
+                        <td>February 28, 2024</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <br />
+                <br />
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer-->
+    <hr class="hr-light mb-3" />
+    <div class="d-md-flex justify-content-between pt-3 bg-dark px-5">
+      <div class="pb-3 fs-xs text-light opacity-50 text-center text-md-start">
+        © All rights reserved. Made by
+        <span style="color: white !important">XooBanks.</span>
+      </div>
+    </div>
+    <!-- Vendor scrits: js libraries and plugins-->
+    <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+    <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <!-- Main theme script-->
+    <script src="js/theme.min.js"></script>
+  </body>
+
+  <script>
+    const now = new Date();
+    const year = now.getFullYear(); // Get the year
+    const month = now.getMonth() + 1; // Get the month (0-indexed, so +1)
+    const day = now.getDate(); // Get the day of the month
+    const hours = now.getHours(); // Get hours
+    const minutes = now.getMinutes(); // Get minutes
+    const seconds = now.getSeconds(); // Get seconds
+
+    document.getElementById("lastlogin").innerHTML =
+      "Last login :: " +
+      `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+
+    function guestMode() {
+      alert("Sorry Your account has been frozen. ");
+    }
+  </script>
+</html>

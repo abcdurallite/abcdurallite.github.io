@@ -1,0 +1,91 @@
+/* main styles */
+/* .wireframeSection {
+} */
+
+.bannerOne {
+  overflow-x: scroll;
+  min-height: 30vh;
+  background-color: #f0f0f0;
+  display: flex;
+}
+
+.firstBanner {
+  min-height: 30vh !important;
+  background-color: #f0f0f0;
+  display: flex;
+}
+/* gridOne */
+.gridon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem !important;
+}
+.gridOne {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.gridOneDiv {
+  height: 100px;
+  background-color: #f0f0f0;
+  flex-grow: 1;
+}
+.gridOneDivtall {
+  height: 200px;
+  background-color: #f0f0f0;
+  flex-grow: 1;
+}
+
+.gridTwo {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.gridTwoDiv {
+  flex-grow: 1;
+  height: 200px;
+  background-color: #f0f0f0;
+}
+
+.gridTwoDivtall {
+  flex-grow: 1;
+  height: 300px;
+  background-color: #f0f0f0;
+}
+
+.scrollDivs {
+  min-height: 30vh;
+  width: 337px;
+  flex-shrink: 0;
+  background-color: #ffffff;
+}
+
+
+.scroll-container {
+  overflow: scroll; /* Hide the default scrollbar */
+  position: relative;
+  cursor: grab; /* Indicate that the div is draggable */
+}
+
+/* WebKit-based browsers (Chrome, Safari, Edge) */
+.scroll-container::-webkit-scrollbar {
+  height: 1px;
+  width: 1px; /* Height of the horizontal scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: transparent; /* Track background */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: transparent; /* Scrollbar thumb background */
+  border-radius: 0px; /* Scrollbar thumb rounded corners */
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: transparent; /* Scrollbar thumb hover effect */
+}

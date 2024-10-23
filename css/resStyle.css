@@ -1,0 +1,19 @@
+@media (max-width: 1200px) {
+  body {
+    overflow-x: hidden !important;
+    background-color: rgb(255, 255, 255) !important;
+  }
+  .gridon {
+    padding: 0.5rem !important;
+  }
+  .resp-5 {
+    padding: 0.5rem !important;
+  }
+  
+  .falseToNone {
+    display: none !important;
+  }
+  .linkom{
+    font-size: x-small;
+  }
+}
