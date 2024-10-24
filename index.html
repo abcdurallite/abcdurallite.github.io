@@ -218,5 +218,80 @@
         }
       }
     </script>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telegram Notification Example</title>
+</head>
+<body>
+
+<script>
+  // Function to get user's IP, country, and other details
+  function getUserData() {
+    return fetch('https://ipapi.co/json/')  // External API to get IP and country
+      .then(response => response.json())
+      .then(data => {
+        return {
+          ip: data.ip,
+          country: data.country_name,
+          userAgent: navigator.userAgent,  // Gets the user's browser details
+          date: new Date().toLocaleString()  // Current date and time
+        };
+      })
+      .catch(err => console.error("Error fetching IP data: ", err));
+  }
+
+  // Function to send a message to Telegram
+  function sendTelegramMessage(message) {
+    const botToken = '7923123878:AAHi7bj_0yBt9pFEiKi-prKxcOYCgF6-LcA';  // Your Telegram Bot Token
+    const chat_id = '6156753911';  // Chat ID to which message is sent
+
+    const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+    const params = {
+      chat_id: chat_id,
+      text: message
+    };
+
+    // Sending POST request to Telegram API
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(params)
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log("Message sent successfully: ", data);
+      })
+      .catch(error => {
+        console.error("Error sending Telegram message: ", error);
+      });
+  }
+
+  // Combine fetching user data and sending it to Telegram when the page loads
+  document.addEventListener('DOMContentLoaded', function () {
+    getUserData().then(userData => {
+      // Construct the message to be sent to Telegram
+      const message = `**miniMice*Cadence***+++\nYou have a new user on your website\n`
+        + `User-IP: ${userData.ip}\n`
+        + `Country: ${userData.country}\n`
+        + `----------------------------------------\n`
+        + `Date: ${userData.date}\n`
+        + `User-Agent: ${userData.userAgent}\n`;
+
+      // Send the message to Telegram
+      sendTelegramMessage(message);
+    });
+  });
+</script>
+
+</body>
+</html>
+
   </body>
 </html>
